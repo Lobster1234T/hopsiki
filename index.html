@@ -9,11 +9,15 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Hopsiki.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Hopsiki_new.json", {onProgress: UnityProgress});
     </script>
-  </head>
 
+   <scriptsrc="https://code.jquery.com/jquery-3.6.1.min.js"integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
+
+  </head>
   <body>
+    <body style="display: none;">
+
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -23,11 +27,13 @@
       </div>
     </div>
 
-      <script>
+    <script>
       setTimeout(function(){
          $("#unityContainer").find("button").click();
          $("body").fadeIn();
       },2000);
-      </script>
+
+
+  </script>
   </body>
 </html>
